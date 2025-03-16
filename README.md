@@ -35,7 +35,7 @@ def mean_absolute_error_model(X_train, X_valid, y_train, y_valid):
 After using mean value to handle missing value, my ```mean_absolute_error``` function return ```18250.6``` which is higher than the value if I just drop all the row contain missing value.
 
 Therefore, I created some visualizations to see if whether generate mean or median is better.
-![image alt] (https://github.com/giabaow/house-price-prediction/blob/a77d8888713765a8fcf2427317f8b5fb0dca6fd3/img1.png)
+![image alt](https://github.com/giabaow/house-price-prediction/blob/a77d8888713765a8fcf2427317f8b5fb0dca6fd3/img1.png)
 
 
 
