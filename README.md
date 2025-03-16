@@ -42,11 +42,11 @@ Therefore, I created some visualizations to determine whether the mean or median
 ![image alt](https://github.com/giabaow/house-price-prediction/blob/a77d8888713765a8fcf2427317f8b5fb0dca6fd3/img1.png)
 ![image alt](https://github.com/giabaow/house-price-prediction/blob/8c56caf4f2aa935285a5057a18a6e0ea8c6c7ebb/img2.png)
 
-From the visualization we can see most of column with missing data is skewness. Therefore, using "median" imputation is a better choice more then "mean" method\
+From the visualization we can see most of column with missing data is skewness. Therefore, using "median" imputation is a better choice more then "mean" method
 
 ## Final Model
 I created a final model with median Simple Imputer method.\
-Finally, I have final prediction results\
+Finally, I have final prediction results \
 ![image alt](https://github.com/giabaow/house-price-prediction/blob/8cafa6217fffab5a7352c825d3f80c5e9e0c7185/img3.png)
 
 
