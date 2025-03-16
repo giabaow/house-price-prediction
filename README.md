@@ -1,5 +1,6 @@
 # House Price Predictions
 From the Intermediate Machine Learning course, after learning how to clean and handle missing data from a raw dataset before applying a machine learning model, I created a file to practice what I have learned. Here are some important notes I wanted to record.\
+\
 At first, to make the prediction more easier, i deleted rows contain null value in "Sale Price" column.
 ```
 X.dropna(axis=0, subset=['SalePrice'], inplace=True)
