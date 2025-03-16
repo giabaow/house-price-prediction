@@ -45,8 +45,23 @@ Therefore, I created some visualizations to determine whether the mean or median
 From the visualization we can see most of column with missing data is skewness. Therefore, using "median" imputation is a better choice more then "mean" method
 
 ## Final Model
-I created a final model with median Simple Imputer method.\
-Finally, I have final prediction results \
+I created a final model with median Simple Imputer method.
+```
+#preprocessing testing data
+my_final_imputer = SimpleImputer(strategy='median')
+final_X_train = pd.DataFrame(my_imputer.fit_transform(X_train))
+final_X_valid = pd.DataFrame(my_imputer.transform(X_valid))
+final_X_train.columns = X_train.columns
+final_X_valid.columns = X_valid.columns
+```
+```
+#build model
+model = RandomForestRegressor(n_estimators=100, random_state=0)
+model.fit(final_X_train, y_train)
+preds_valid = model.predict(final_X_valid)
+print(mean_absolute_error(y_valid, preds_valid))
+```
+Finally, I have final prediction results by applying Forest Regressor Model. \
 ![image alt](https://github.com/giabaow/house-price-prediction/blob/8cafa6217fffab5a7352c825d3f80c5e9e0c7185/img3.png)
 
 
