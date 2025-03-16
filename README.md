@@ -17,9 +17,25 @@ X_train, X_valid, y_train, y_valid = train_test_split(X, y, train_size=0.8, test
 
 ## Handle missing value
 After checking the quality of the data set. I realized there are some missing value in the trainning data set. Therefore i used a missing value handling method which is SimpleImputer. SimpleImputer helps me to generate a new value for missing position which is the mean or median of that column. 
-I built a model function and a function to measure the average magnitude of errors between predicted and actual values which is mean_absolute_error. 
 
-After using mean value to handle missing value, my ```mean_absolute_error``` function return ```18250.6```
+## Forest Regression Model
+I built a model function base on Forest Regression Model to predict value and a function to measure the average magnitude of errors between predicted and actual values which is mean_absolute_error. 
+```
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_absolute_error
+def mean_absolute_error_model(X_train, X_valid, y_train, y_valid):
+    model = RandomForestRegressor(n_estimators=100, random_state=0)
+    model.fit(X_train, y_train)
+    preds = model.predict(X_valid)
+    mae = (mean_absolute_error(y_valid, preds))
+    return mae
+```
+
+## Visualization
+After using mean value to handle missing value, my ```mean_absolute_error``` function return ```18250.6``` which is higher than the value if I just drop all the row contain missing value.
+
+Therefore, I created some visualizations to see if whether generate mean or median is better.
+
 
 
 
