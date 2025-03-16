@@ -10,7 +10,7 @@ Then, I selected only the "category" column, excluding those with an object data
 X = X.select_dtypes(exclude=['object'])
 X_test = X_test.select_dtypes(exclude=['object'])
 ```
-After that, I divided "train" dataset into validate dataset and training dataset\
+After that, I divided "train" dataset into validation dataset and training dataset\
 ```
 from sklearn.model_selection import train_test_split
 X_train, X_valid, y_train, y_valid = train_test_split(X, y, train_size=0.8, test_size=0.2,random_state=0)
