@@ -5,7 +5,7 @@ Then, I selected only the "category" column, excluding those with an object data
 After that, I divided "train" dataset into validate dataset and training dataset
 
 ## Handle missing value
-Àfter checking the quality of the data set. I realized there are some missing value in the trainning data set. Therefore i used a missing value handling method which is SimpleImputer. SimpleImputer helps me to generate a new value for missing position which is the mean or median of that column. 
+After checking the quality of the data set. I realized there are some missing value in the trainning data set. Therefore i used a missing value handling method which is SimpleImputer. SimpleImputer helps me to generate a new value for missing position which is the mean or median of that column. 
 I built a model function and a function to measure the average magnitude of errors between predicted and actual values. 
 
 
