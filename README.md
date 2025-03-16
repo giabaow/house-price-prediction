@@ -34,8 +34,20 @@ def mean_absolute_error_model(X_train, X_valid, y_train, y_valid):
 ## Visualization
 After using mean value to handle missing value, my ```mean_absolute_error``` function return ```18250.6``` which is higher than the value if I just drop all the row contain missing value.
 
-Therefore, I created some visualizations to see if whether generate mean or median is better.
+Therefore, I created some visualizations to determine whether the mean or median is better
 ![image alt](https://github.com/giabaow/house-price-prediction/blob/a77d8888713765a8fcf2427317f8b5fb0dca6fd3/img1.png)
+![image alt](https://github.com/giabaow/house-price-prediction/blob/8c56caf4f2aa935285a5057a18a6e0ea8c6c7ebb/img2.png)
+
+From the visualization we can see most of column with missing data is skewness. Therefore, using "median" imputation is a better choice more then "mean" method
+
+## Final Model
+I created a final model with median Simple Imputer method.
+Finally, I have final prediction results
+![image alt](https://github.com/giabaow/house-price-prediction/blob/8cafa6217fffab5a7352c825d3f80c5e9e0c7185/img3.png)
+
+
+
+
 
 
 
