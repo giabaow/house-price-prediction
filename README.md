@@ -17,6 +17,9 @@ X_train, X_valid, y_train, y_valid = train_test_split(X, y, train_size=0.8, test
 
 ## Handle missing value
 After checking the quality of the data set. I realized there are some missing value in the trainning data set. Therefore i used a missing value handling method which is SimpleImputer. SimpleImputer helps me to generate a new value for missing position which is the mean or median of that column. 
-I built a model function and a function to measure the average magnitude of errors between predicted and actual values. 
+I built a model function and a function to measure the average magnitude of errors between predicted and actual values which is mean_absolute_error. 
+
+After using mean value to handle missing value, my ```mean_absolute_error``` function return ```18250.6```
+
 
 
